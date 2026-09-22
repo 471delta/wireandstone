@@ -3,6 +3,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 import SpecimenSeal from "../components/SpecimenSeal.astro";
 import MineralDiagram from "../components/MineralDiagram.astro";
 import ArchiveMark from "../components/ArchiveMark.astro";
+import GemIcon from "../components/GemIcon.astro";
 ---
 <SiteLayout title="Wires & STONE">
   <header class="masthead" id="top">
@@ -20,7 +21,7 @@ import ArchiveMark from "../components/ArchiveMark.astro";
         <a href="#craft">THE CRAFT</a>
         <a href="#catalog">CATALOG STATUS</a>
         <a href="#inquiry">PRIVATE INQUIRY</a>
-        <a class="mastnav__secure" href="mailto:wiresandstone@gmail.com">DIRECT EMAIL <i aria-hidden="true">↗</i></a>
+        <a class="mastnav__secure" href="mailto:wiresandstone@gmail.com"><span class="nav-icon" aria-hidden="true">✦</span> DIRECT EMAIL <i aria-hidden="true">↗</i></a>
       </nav>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     </div>
@@ -36,7 +37,7 @@ import ArchiveMark from "../components/ArchiveMark.astro";
   <main id="main">
     <section class="hero section-frame" aria-labelledby="hero-title">
       <div class="hero__blueprint" aria-hidden="true">
-        <span>◫</span><span>—</span><span>○</span><span>· · ·</span><span>↗</span>
+        <span class="blueprint-chip">◇</span><span>—</span><span class="blueprint-chip">✦</span><span>· · ·</span><span class="blueprint-chip">⌁</span>
       </div>
       <div class="hero__copy">
         <ArchiveMark />
@@ -49,6 +50,11 @@ import ArchiveMark from "../components/ArchiveMark.astro";
         </div>
       </div>
       <div class="hero__artifact">
+        <div class="hero__gem-orbit" aria-hidden="true">
+          <GemIcon kind="quartz" size={74} />
+          <GemIcon kind="amethyst" size={62} />
+          <GemIcon kind="citrine" size={54} />
+        </div>
         <div class="hero__halo" aria-hidden="true"></div>
         <MineralDiagram />
         <div class="specimen-plaque">
@@ -82,16 +88,19 @@ import ArchiveMark from "../components/ArchiveMark.astro";
         <div class="archive-index">
           <article>
             <span class="archive-index__num">01</span>
+            <div class="archive-index__icon"><GemIcon kind="quartz" size={54} /></div>
             <h3>Raw Crystals</h3>
             <p>Authentic natural mineral points</p>
           </article>
           <article>
             <span class="archive-index__num">02</span>
+            <div class="archive-index__icon"><GemIcon kind="wire" size={54} /></div>
             <h3>Custom Wraps</h3>
             <p>Hand-manipulated wire weaving</p>
           </article>
           <article>
             <span class="archive-index__num">03</span>
+            <div class="archive-index__icon"><GemIcon kind="gem" size={54} /></div>
             <h3>Private Request</h3>
             <p>Arranged by direct email</p>
           </article>
@@ -110,6 +119,7 @@ import ArchiveMark from "../components/ArchiveMark.astro";
           <SpecimenSeal />
         </div>
         <div class="archive-closed">
+          <div class="archive-closed__icons" aria-hidden="true"><GemIcon kind="amethyst" size={68} /><GemIcon kind="quartz" size={86} /><GemIcon kind="citrine" size={60} /></div>
           <span class="archive-closed__bar"></span>
           <p class="archive-closed__title">GALLERY UNDER CONSTRUCTION</p>
           <h3>Work in Progress</h3>
@@ -137,7 +147,7 @@ import ArchiveMark from "../components/ArchiveMark.astro";
         <p class="lead">For custom raw stone wraps, commission details, or private inquiries, please reach out directly via email.</p>
         <div class="commission-desk">
           <div class="commission-desk__stamp" aria-hidden="true">
-            <span>WS</span><small>01</small>
+            <span>WS</span><small>01</small><GemIcon kind="gem" size={34} />
           </div>
           <div class="commission-desk__content">
             <div class="commission-desk__controls">
@@ -162,11 +172,13 @@ import ArchiveMark from "../components/ArchiveMark.astro";
     </div>
     <div class="colophon__grid">
       <section class="cert-panel">
+        <div class="cert-panel__mark" aria-hidden="true"><GemIcon kind="archive" size={44} /></div>
         <div class="cert-panel__label">[ CYBERSECURITY SERVICES ]</div>
         <strong>SYSTEM ARCHITECT &amp; LEAD ENGINEER</strong>
         <p>DESIGNED AND CODED BY MR. JAEDEN VALLÉE</p>
       </section>
       <section class="cert-panel cert-panel--secure">
+        <div class="cert-panel__mark cert-panel__mark--secure" aria-hidden="true"><GemIcon kind="amethyst" size={44} /></div>
         <div class="cert-panel__label">[ CYBERSECURITY SERVICES ]</div>
         <strong>GUARANTEED SAFETY</strong>
         <p>SECURITY INFRASTRUCTURE &amp; PROTOCOL</p>
