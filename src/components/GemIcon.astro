@@ -1,0 +1,59 @@
+---
+interface Props {
+  kind?: "quartz" | "amethyst" | "citrine" | "gem" | "wire" | "archive";
+  size?: number;
+  label?: string;
+}
+const { kind = "gem", size = 56, label } = Astro.props;
+const title = label ?? `decorative ${kind} icon`;
+---
+<span class={`gem-icon gem-icon--${kind}`} style={`--icon-size:${size}px`} role={label ? "img" : undefined} aria-label={label} aria-hidden={label ? undefined : "true"}>
+  {kind === "quartz" && (
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23 8L42 12L53 28L43 53L22 58L10 38L13 19L23 8Z" />
+      <path d="M23 8L29 32L43 53M42 12L29 32L13 19M29 32L10 38M29 32L53 28" />
+      <path d="M22 58L29 32L43 53" opacity=".55" />
+      <circle cx="29" cy="32" r="2.3" />
+    </svg>
+  )}
+  {kind === "amethyst" && (
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M32 7L43 14L53 31L45 51L31 58L18 49L11 32L20 15L32 7Z" />
+      <path d="M20 15L31 31L43 14M11 32L31 31L53 31M18 49L31 31L45 51M31 7V31" />
+      <path d="M20 15L31 7L43 14L31 31L20 15Z" opacity=".45" />
+      <path d="M11 32L31 31L18 49L11 32Z" opacity=".3" />
+    </svg>
+  )}
+  {kind === "citrine" && (
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17 9L35 6L52 19L50 42L36 57L16 51L9 31L17 9Z" />
+      <path d="M17 9L29 31L35 6M29 31L52 19M29 31L50 42M29 31L16 51M9 31L29 31" />
+      <path d="M17 9L29 31L9 31L17 9Z" opacity=".32" />
+      <path d="M35 6L52 19L29 31L35 6Z" opacity=".48" />
+    </svg>
+  )}
+  {kind === "gem" && (
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 23L18 12H46L54 23L32 53L10 23Z" />
+      <path d="M18 12L26 23L32 53M46 12L38 23L32 53M10 23H54M26 23H38" />
+      <path d="M18 12L26 23H10L18 12ZM46 12L38 23H54L46 12Z" opacity=".46" />
+    </svg>
+  )}
+  {kind === "wire" && (
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13 44C21 19 35 11 48 18C57 23 52 36 43 41C33 47 23 43 22 34C21 25 28 18 37 20C45 22 47 31 42 36C36 41 28 38 28 32" />
+      <circle cx="13" cy="44" r="3" />
+      <circle cx="48" cy="18" r="3" />
+    </svg>
+  )}
+  {kind === "archive" && (
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="9" y="12" width="46" height="40" rx="1" />
+      <path d="M16 22H48M16 30H41M16 38H46M16 46H33" />
+      <path d="M43 30H51V42H43" opacity=".58" />
+      <circle cx="47" cy="36" r="2.5" />
+    </svg>
+  )}
+  <span class="gem-icon__sparkle">✦</span>
+  <span class="sr-only">{title}</span>
+</span>
