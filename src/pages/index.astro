@@ -1,0 +1,182 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import SpecimenSeal from "../components/SpecimenSeal.astro";
+import MineralDiagram from "../components/MineralDiagram.astro";
+import ArchiveMark from "../components/ArchiveMark.astro";
+---
+<SiteLayout title="Wires & STONE">
+  <header class="masthead" id="top">
+    <div class="masthead__edge">
+      <span>ALBERTA, CANADA • EST. 2021</span>
+      <a href="https://jaeden.pages.dev" target="_blank" rel="noreferrer">DESIGNER - HTTPS://JAEDEN.PAGES.DEV</a>
+    </div>
+    <div class="masthead__main">
+      <a class="wordmark" href="#top" aria-label="Wires & STONE">
+        <span>Wires &amp;</span>
+        <strong>STONE</strong>
+      </a>
+      <nav class="mastnav" aria-label="Primary navigation">
+        <a href="#top">HOME</a>
+        <a href="#craft">THE CRAFT</a>
+        <a href="#catalog">CATALOG STATUS</a>
+        <a href="#inquiry">PRIVATE INQUIRY</a>
+        <a class="mastnav__secure" href="mailto:wiresandstone@gmail.com">DIRECT EMAIL <i aria-hidden="true">↗</i></a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </div>
+    <div class="mobile-nav" id="site-nav" hidden>
+      <a href="#top">HOME</a>
+      <a href="#craft">THE CRAFT</a>
+      <a href="#catalog">CATALOG STATUS</a>
+      <a href="#inquiry">PRIVATE INQUIRY</a>
+      <a href="mailto:wiresandstone@gmail.com">DIRECT EMAIL ↗</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-frame" aria-labelledby="hero-title">
+      <div class="hero__blueprint" aria-hidden="true">
+        <span>◫</span><span>—</span><span>○</span><span>· · ·</span><span>↗</span>
+      </div>
+      <div class="hero__copy">
+        <ArchiveMark />
+        <p class="eyebrow">Be elegant, feel elegant.</p>
+        <h1 id="hero-title">Connect with the wires, and <i>walk</i> with the stones.</h1>
+        <p class="hero__body">Bespoke, handcrafted mineral wire art by Wires &amp; Stone. Hand-wrapped around natural raw crystals and unheated gems. Tailored by private arrangement.</p>
+        <div class="hero__actions">
+          <a class="button button--filled magnetic" href="https://www.instagram.com/wiresandstone/" target="_blank" rel="noreferrer">VISIT @WIRESANDSTONE <span>↗</span></a>
+          <a class="button button--outline magnetic" href="mailto:wiresandstone@gmail.com?subject=Private%20Commission">PRIVATE COMMISSION <span>↗</span></a>
+        </div>
+      </div>
+      <div class="hero__artifact">
+        <div class="hero__halo" aria-hidden="true"></div>
+        <MineralDiagram />
+        <div class="specimen-plaque">
+          <div class="specimen-plaque__head">
+            <span>Wires &amp; Stone</span>
+            <SpecimenSeal />
+          </div>
+          <strong>RAW MINERAL ART</strong>
+          <p>Artisan hand-woven wire wrapping around natural gemstones and raw mineral points.</p>
+          <span>Alberta, Canada • Est. 2021</span>
+        </div>
+      </div>
+      <div class="hero__footnote" aria-hidden="true">R1 / FIELD RECORD / 2021—2026</div>
+    </section>
+
+    <section class="craft section-frame" id="craft" aria-labelledby="craft-title">
+      <div class="section-index"><span>02</span><div></div><span>WS</span></div>
+      <div class="craft__intro">
+        <p class="section-kicker">HISTORY</p>
+        <h2 id="craft-title">Based in <i>Alberta, Canada</i></h2>
+        <p class="lead">Founded in 2021, Wires &amp; Stone was created to connect raw mineral beauty with intricate wire wrapping.</p>
+        <div class="metrics" aria-label="Established 2021 and Handcrafted Precision">
+          <div><span>Established 2021</span><b>01</b></div>
+          <div><span>Handcrafted Precision</span><b>02</b></div>
+        </div>
+      </div>
+      <div class="craft__detail">
+        <div class="detail-heading"><span>Here's Some Information:</span><small>WS / CRAFT / 01</small></div>
+        <p>At Wires &amp; Stone, each piece begins with hand-selected raw crystals. Through delicate wire wrapping, and precise cold tension techniques, every design highlights the natural beauty of the stone(s), and gem(s) chosen, for your own beautiful piece.</p>
+        <p>Specific metallic wire selections, chain styles, and custom gem requests are tailored entirely by private arrangement. Reach out directly to discuss bespoke commissions or special stone wraps.</p>
+        <div class="archive-index">
+          <article>
+            <span class="archive-index__num">01</span>
+            <h3>Raw Crystals</h3>
+            <p>Authentic natural mineral points</p>
+          </article>
+          <article>
+            <span class="archive-index__num">02</span>
+            <h3>Custom Wraps</h3>
+            <p>Hand-manipulated wire weaving</p>
+          </article>
+          <article>
+            <span class="archive-index__num">03</span>
+            <h3>Private Request</h3>
+            <p>Arranged by direct email</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog section-frame" id="catalog" aria-labelledby="catalog-title">
+      <div class="catalog__topline">
+        <p class="section-kicker">Digital Catalog</p>
+        <div class="registration-line"><span>CAT / 2026</span><i></i><span>R—07</span></div>
+      </div>
+      <div class="catalog__field">
+        <div class="catalog__heading">
+          <h2 id="catalog-title">Gallery Status</h2>
+          <SpecimenSeal />
+        </div>
+        <div class="archive-closed">
+          <span class="archive-closed__bar"></span>
+          <p class="archive-closed__title">GALLERY UNDER CONSTRUCTION</p>
+          <h3>Work in Progress</h3>
+          <p class="archive-closed__body">The web catalog is currently under construction, while I navigate production of the website. All custom requests and available inventory are managed by private arrangement.</p>
+          <p class="archive-closed__body">To view my beautiful pieces, crystal wraps, and past work, please visit my official Instagram account directly at @wiresandstone.</p>
+          <a class="button button--filled magnetic" href="https://www.instagram.com/wiresandstone/" target="_blank" rel="noreferrer">VISIT INSTAGRAM @WIRESANDSTONE <span>↗</span></a>
+          <div class="catalog__seal-line" aria-hidden="true"><span></span><b>◦</b><span></span></div>
+        </div>
+      </div>
+      <div class="catalog__notation" aria-hidden="true">
+        <span>┌────────┐</span><span>WS:ARC.004</span><span>└────────┘</span>
+      </div>
+    </section>
+
+    <section class="inquiry section-frame" id="inquiry" aria-labelledby="inquiry-title">
+      <div class="inquiry__side">
+        <div class="section-index"><span>04</span><div></div><span>PX</span></div>
+        <div class="correspondence-seal" aria-hidden="true">
+          <SpecimenSeal />
+        </div>
+      </div>
+      <div class="inquiry__main">
+        <p class="section-kicker">Inquiries</p>
+        <h2 id="inquiry-title">Private <i>Arrangement</i></h2>
+        <p class="lead">For custom raw stone wraps, commission details, or private inquiries, please reach out directly via email.</p>
+        <div class="commission-desk">
+          <div class="commission-desk__stamp" aria-hidden="true">
+            <span>WS</span><small>01</small>
+          </div>
+          <div class="commission-desk__content">
+            <div class="commission-desk__controls">
+              <a class="button button--filled magnetic" href="mailto:wiresandstone@gmail.com">OPEN E-MAIL SERVICE <span>↗</span></a>
+              <button class="button button--ghost magnetic copy-email" type="button" data-copy-email="wiresandstone@gmail.com">COPY EMAIL ADDRESS <span>□</span></button>
+            </div>
+            <p class="email-line">Direct Email: wiresandstone@gmail.com</p>
+          </div>
+          <div class="commission-desk__rule" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon" aria-labelledby="footer-title">
+    <div class="colophon__mast">
+      <div>
+        <p class="colophon__eyebrow">[ LEAD ARCHITECT &amp; DEVELOPER ]</p>
+        <h2 id="footer-title">VERIFIED <i>DESIGNER</i></h2>
+      </div>
+      <SpecimenSeal />
+    </div>
+    <div class="colophon__grid">
+      <section class="cert-panel">
+        <div class="cert-panel__label">[ CYBERSECURITY SERVICES ]</div>
+        <strong>SYSTEM ARCHITECT &amp; LEAD ENGINEER</strong>
+        <p>DESIGNED AND CODED BY MR. JAEDEN VALLÉE</p>
+      </section>
+      <section class="cert-panel cert-panel--secure">
+        <div class="cert-panel__label">[ CYBERSECURITY SERVICES ]</div>
+        <strong>GUARANTEED SAFETY</strong>
+        <p>SECURITY INFRASTRUCTURE &amp; PROTOCOL</p>
+        <b>SECURED BY VALLÉE CYBER-DEFENCE</b>
+      </section>
+    </div>
+    <div class="colophon__base">
+      <span>© 2026 Wires &amp; Stone. All Rights Reserved.</span>
+      <a href="https://www.instagram.com/wiresandstone/" target="_blank" rel="noreferrer">@wiresandstone</a>
+      <a href="mailto:wiresandstone@gmail.com">wiresandstone@gmail.com</a>
+    </div>
+  </footer>
+</SiteLayout>
